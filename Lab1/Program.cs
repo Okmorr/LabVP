@@ -1,11 +1,11 @@
 ﻿public class HW1
 {
-    public static long QueueTime(int[] customers, int s, int c)
+    public static long QueueTime(int[] customers,int c)
     {
         if (c == 1)
         {
             long sum = 0;
-            for (int i = 0; i < s; ++i)
+            for (int i = 0; i < customers.Length; ++i)
             {
                 sum += customers[i];
             }
@@ -18,7 +18,7 @@
             {
                 kassa[i] = 0;
             }
-            for (int i = 0; i < s; ++i)
+            for (int i = 0; i < customers.Length; ++i)
             {
                 int min = 999;
                 int ind = 0;
@@ -56,10 +56,10 @@
             int[] cassa4 = { 10, 5, 6, 7 };
             int a = 1;
             int b = 2;
-            Console.WriteLine(QueueTime(cassa1, 3, a));
-            Console.WriteLine(QueueTime(cassa2, 4, b));
-            Console.WriteLine(QueueTime(cassa3, 3, b));
-            Console.WriteLine(QueueTime(cassa4, 4, b));
+            Console.WriteLine(QueueTime(cassa1,a));
+            Console.WriteLine(QueueTime(cassa2,b));
+            Console.WriteLine(QueueTime(cassa3,b));
+            Console.WriteLine(QueueTime(cassa4,b));
         }
 
     }
